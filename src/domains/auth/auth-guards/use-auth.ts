@@ -4,7 +4,6 @@ import { ApiUnauthorizedErrorResponse } from 'src/core/swagger/api-unauthorized-
 import { UserGuard } from './auth.gurad';
 
 const UseAuthGuards = () => {
-  console.log('UseAuthGuards!!!!!!');
   return applyDecorators(
     UseGuards(UserGuard),
     ApiBearerAuth('accessToken'),

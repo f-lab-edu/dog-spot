@@ -28,15 +28,6 @@ import { RefTokenRepository } from './repositories/ref-token.repository';
     TypeOrmExModule.forCustomRepository([UserRepository, RefTokenRepository]),
     PassportModule,
     forwardRef(() => UserModule),
-    // RedisModule.forRoot({
-    //   readyLog: true,
-    //   config: {
-    //     host: process.env.REDIS_HOST,
-    //     // host : 'www.reptimate.store',
-    //     port: 6379,
-    //     // password: 'foobared'
-    //   },
-    // }),
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy, JwtRefreshTokenStrategy],

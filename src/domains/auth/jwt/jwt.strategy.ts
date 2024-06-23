@@ -17,6 +17,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(payload: any) {
+    console.log('validate!@!!!!!!!jwt');
     // const redis = this.redisService.getClient();
     // const userInfo = await redis.get(`userInfo${payload.userIdx}`);
     // let user;
